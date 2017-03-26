@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+
+<html ng-app="brndm" detect-browser="" class="ng-scope ng-isolate-scope firefox firefox50">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Naman Khator - Software Development Engineer</title>
+    <meta name="description" content="View naman khator’s professional profile and learn about his bio, experiences, skills, accolades, educational background and more.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='//fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet'>
+    <link rel="stylesheet" href="css/final.css">
+    <script src="js/modernizr.js"></script>
+    <script async src="js/final.js"></script>
+</head>
+
+<body class="public nav-index nav-index-profile">
+    <ui-view class="index-view am-fade ng-scope" autoscroll="" style="">
+        <div class="public ng-scope">
+            <ui-view class="page-view ng-scope">
+                <profile profile-data="$ctrl.profile" profile-account="$resolve.profileAccount" profile-preferences="$ctrl.preferences" profile-can-edit="$resolve.canEdit" profile-progress="$ctrl.progress" class="ng-scope ng-isolate-scope">
+                    <header class="profile-background tall" ng-class="{tall: !index.account}" image-resize="1280x330" style="background-image: url('images/header-background.jpeg');"></header>
+                    <profile-intro class="profile-intro ng-isolate-scope" profile-intro-account="$ctrl.account" profile-intro-data="$ctrl.data" profile-intro-can-edit="$ctrl.canEdit">
+                        <div class="profile-intro-top">
+                            <div class="profile-intro-top-left remove_on_mobile ng-scope">
+                                <button class="btn btn-large profile-connect-btn ng-scope" id="reopen" processing-class="btn-loading">
+									                <span class="btn-text ng-binding">Full Version</span>
+									              </button>
+                            </div>
+                            <div class="profile-intro-top-center">
+                                <div class="profile-intro-main">
+                                    <div class="user-avatar-plain profile-avatar user-avatar" user-avatar="$ctrl.account" watch-user-changes="">
+                                        <span class="image preview-image" style="background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAMElEQVR4nGOcMaP+/8vLlxiE9HQYGP18XP6LsPxg+MImycDE+vUtA6cAKwPn91sMAC0cDYxgRySNAAAAAElFTkSuQmCC')"></span>
+                                        <img src="images/profile.png" class="image full-image loaded">
+                                    </div>
+                                    <h1 class="profile-name ng-binding"> naman khator</h1>
+                                    <h2 class="profile-headline ng-binding">Software Development Engineer</h2>
+                                    <div class="profile-intro-misc">
+                                        <profile-location class="profile-location ng-scope ng-isolate-scope" ng-if="$ctrl.account.location" profile-location-data="$ctrl.account.location">
+                                            <span ng-if="!$ctrl.data.user_input" class="ng-scope">
+												                      <span ng-if="!$ctrl.data.city_name" class="ng-binding ng-scope"></span>
+                                            </span>
+                                        </profile-location>
+                                        <span class="profile-social-links ng-scope" ng-if="$ctrl.data.social_networks.length">
+                  												<profile-social-links profile-social-links-data="$ctrl.data.social_networks" class="ng-isolate-scope">
+                  													<a class="profile-social-link ng-scope" svg-sprite="social-networks--linkedin" href="https://www.linkedin.com/in/namankhator" target="_blank" rel="nofollow" title="LinkedIn">
+                  														<svg class="social-networks--linkedin">
+                  															<svg class="social-networks--linkedin">
+                  																<use xlink:href="images/icons.svg#social-networks--linkedin"></use>
+                  															</svg>
+                  														</svg>
+                  													</a>
+                  													<a class="profile-social-link ng-scope" ng-repeat="socialLink in $ctrl.socialLinks" svg-sprite="social-networks--github" href="https://github.com/princenaman" target="_blank" rel="nofollow" title="GithHub">
+                  														<svg class="social-networks--github">
+                  															<svg class="social-networks--github">
+                  																<use xlink:href="images/icons.svg#social-networks--github"></use>
+                  															</svg>
+                  														</svg>
+                  													</a>
+                  													<a class="profile-social-link ng-scope" ng-repeat="socialLink in $ctrl.socialLinks" svg-sprite="social-networks--stackoverflow" href="//stackoverflow.com/users/2165472/naman-khator" target="_blank" rel="nofollow" title="StackOverflow">
+                  														<svg class="social-networks--stackoverflow">
+                  															<svg class="social-networks--stackoverflow">
+                  																<use xlink:href="images/icons.svg#social-networks--stackoverflow"></use>
+                  															</svg>
+                  														</svg>
+                  													</a>
+                  												</profile-social-links>
+                  											</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-intro-top-right remove_on_mobile ng-scope">
+                                <div class="profile-work-status ng-scope" ng-if="$ctrl.data">
+                                    <profile-work-status profile-work-status-data="$ctrl.data" class="ng-isolate-scope">
+                                        <div ng-if="$ctrl.data.isAvailableForHire()" class="profile-work-status-available ng-scope" ng-class="{'with-hourly-rate': $ctrl.data.hourly_rate}">
+                                            <div class="text-success profile-work-status-text">Need Help?</div>
+                                        </div>
+                                    </profile-work-status>
+                                    <a class="btn btn-primary profile-work-status-hire-me-btn ng-scope" href="mailto:namankhator@gmail.com" target="_blank"> Contact </a>
+                                </div>
+                            </div>
+                        </div>
+                    </profile-intro>
+                    <div class="profile-nav-sticky-wrapper remove_on_mobile ng-scope ng-isolate-scope" sticky="" sticky-class="sticked" ng-if="$ctrl.data" style="z-index: auto; top: auto; position: static; left: auto; margin-top: 0px;">
+                        <profile-nav profile-nav-items="$ctrl.sections" profile-nav-data="$ctrl.data" class="ng-isolate-scope">
+                            <a class="text-subtle profile-nav-item ng-binding ng-scope" du-scrollspy="" du-smooth-scroll="" ng-repeat="item in $ctrl.items" href="#about" ng-hide="$ctrl.isSectionEmpty(item)">about</a>
+                            <a class="text-subtle profile-nav-item ng-binding ng-scope" du-scrollspy="" du-smooth-scroll="" ng-repeat="item in $ctrl.items" href="#services" ng-hide="$ctrl.isSectionEmpty(item)">skills</a>
+                            <a class="text-subtle profile-nav-item ng-binding ng-scope" du-scrollspy="" du-smooth-scroll="" ng-repeat="item in $ctrl.items" href="#experience" ng-hide="$ctrl.isSectionEmpty(item)">experience</a>
+                            <a class="text-subtle profile-nav-item ng-binding ng-scope" du-scrollspy="" du-smooth-scroll="" ng-repeat="item in $ctrl.items" href="#education" ng-hide="$ctrl.isSectionEmpty(item)">education</a>
+                            <a class="text-subtle profile-nav-item ng-binding ng-scope" du-scrollspy="" du-smooth-scroll="" ng-repeat="item in $ctrl.items" href="#projects" ng-hide="$ctrl.isSectionEmpty(item)">projects</a>
+                        </profile-nav>
+                    </div>
+                    <hr class="show_on_mobile">
+                    <profile-sections ng-if="$ctrl.data" profile-sections-items="$ctrl.sections" profile-sections-profile="$ctrl.data" profile-sections-can-edit="$ctrl.canEdit" class="ng-scope ng-isolate-scope">
+                        <div class="profile-section-wrapper profile-about ng-scope" id="about">
+                            <div class="profile-section-border"></div>
+                            <profile-about class="profile-section ng-isolate-scope" ng-class="{'profile-section-empty': $ctrl.getIsSectionEmpty('about')}" profile-section-can-edit="$ctrl.canEdit" profile-section-is-empty="$ctrl.getIsSectionEmpty('about')" profile-section-data="$ctrl.profile">
+                                <div class="profile-section-header ng-scope" ng-if="!$ctrl.isEmpty">
+                                    <h1 class="profile-section-title">About Me</h1>
+                                </div>
+                                <div class="profile-section-content profile-about-content">
+                                    <span class="text-secondary profile-about-text ng-binding ng-scope" ng-if="!$ctrl.isEmpty" ng-bind-html="$ctrl.data.bio | multiline">I
+										am not really sure what can I write about myself. I just believe you
+										cannot know someone until you either work with them or live with them :/</span>
+                                </div>
+                            </profile-about>
+                        </div>
+                        <div class="profile-section-wrapper profile-services ng-scope" id="services">
+                            <div class="profile-section-border"></div>
+                            <profile-services class="profile-section ng-isolate-scope" ng-class="{'profile-section-empty': $ctrl.getIsSectionEmpty('services')}" profile-section-can-edit="$ctrl.canEdit" profile-section-is-empty="$ctrl.getIsSectionEmpty('services')" profile-section-data="$ctrl.profile">
+                                <div class="profile-section-header ng-scope" ng-if="$ctrl.data.services.length">
+                                    <h1 class="profile-section-title">My Skills</h1>
+                                </div>
+                                <div class="profile-section-content">
+                                    <div class="profile-skills-content">
+                                        <profile-skills-list profile-skills-list-items="$ctrl.data.skills" profile-skills-list-can-edit="$ctrl.canEdit" ng-if="$ctrl.data.skills.length" class="ng-scope ng-isolate-scope">
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="200" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding"><span class="remove_on_mobile">Amazon Web Services</span><span class="show_on_mobile">AWS</span></span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">LAMP</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Laravel</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Node.js</span> &nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Sails</span> &nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Express.js</span> &nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="200" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">OAuth</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">HTML5/CSS3</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">JavaScript</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">jQuery</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">AJAX</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="400" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Twitter Bootstrap</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Expert</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">D3.js</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="200" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">PhoneGap</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="200" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Android</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="200" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Git</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">2+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Photoshop</span>
+                                                    <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
+                                                </div>
+                                            </profile-skill>
+                                        </profile-skills-list>
+                                    </div>
+                                </div>
+                            </profile-services>
+                        </div>
+                        <div class="profile-section-wrapper profile-experience ng-scope" id="experience">
+                            <div class="profile-section-border"></div>
+                            <profile-experience class="profile-section ng-isolate-scope" ng-class="{'profile-section-empty': $ctrl.getIsSectionEmpty('experience')}" profile-section-can-edit="$ctrl.canEdit" profile-section-is-empty="$ctrl.getIsSectionEmpty('experience')" profile-section-data="$ctrl.profile">
+
+                                <div class="profile-section-header ng-scope" ng-if="!$ctrl.isEmpty">
+                                    <h1 class="profile-section-title">Experience</h1>
+                                </div>
+
+
+                                <div class="profile-section-content">
+                                    <profile-experience-list profile-experience-list-items="$ctrl.data.experience" profile-experience-list-can-edit="$ctrl.canEdit" ng-class="{single: $ctrl.data.experience.length === 1}" class="ng-isolate-scope">
+                                        <div class="profile-experience-item ng-scope">
+                                            <div class="profile-experience-image">
+                                                <div class="profile-experience-logo ng-scope" style="background-image: url('images/maplegraph.png');"></div>
+                                            </div>
+                                            <div class="profile-experience-item-right">
+                                                <h3 class="profile-experience-company-name ng-binding">MapleGraph</h3>
+                                                <div class="text-secondary profile-experience-subtitle">
+                                                    <span class="ng-binding">Full Stack Developer</span><br>
+                                                    <profile-period profile-period-data="experience" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Aug</span>
+                                                        <span class="ng-binding">2016</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span ng-if="$ctrl.data.is_current" class="ng-scope">Present</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="profile-experience-item ng-scope">
+                                            <div class="profile-experience-image">
+                                                <div class="profile-experience-logo ng-scope" style="background-image: url('images/zomato.png');"></div>
+                                            </div>
+                                            <div class="profile-experience-item-right">
+                                                <h3 class="profile-experience-company-name ng-binding">Zomato</h3>
+                                                <div class="text-secondary profile-experience-subtitle">
+                                                    <span class="ng-binding">Software Development Engineer</span>
+                                                    <br>
+                                                    <profile-period profile-period-data="experience" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Aug</span>
+                                                        <span class="ng-binding">2015</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span class="ng-binding ng-scope">Jul</span>
+                                                        <span class="ng-binding ng-scope">2016</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-experience-item ng-scope">
+                                            <div class="profile-experience-image">
+                                                <div class="profile-experience-logo ng-scope" style="background-image: url('images/configaware.png');"></div>
+                                            </div>
+                                            <div class="profile-experience-item-right">
+                                                <h3 class="profile-experience-company-name ng-binding">ConfigAWare</h3>
+                                                <div class="text-secondary profile-experience-subtitle">
+                                                    <span class="ng-binding">Software Development Intern</span>
+                                                    <br>
+                                                    <profile-period profile-period-data="experience" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Feb</span>
+                                                        <span class="ng-binding">2015</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span class="ng-binding ng-scope">Jul</span>
+                                                        <span class="ng-binding ng-scope">2016</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-experience-item ng-scope">
+                                            <div class="profile-experience-image">
+                                                <div class="profile-experience-logo ng-scope" style="background-image: url('images/televic.png');"></div>
+                                            </div>
+                                            <div class="profile-experience-item-right">
+                                                <h3 class="profile-experience-company-name ng-binding">Televic</h3>
+                                                <div class="text-secondary profile-experience-subtitle">
+                                                    <span class="ng-binding">Software Development Intern</span>
+                                                    <br>
+                                                    <profile-period profile-period-data="experience" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Jul</span>
+                                                        <span class="ng-binding">2014</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span class="ng-binding ng-scope">Sep</span>
+                                                        <span class="ng-binding ng-scope">2014</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="profile-experience-item ng-scope">
+                                            <div class="profile-experience-image">
+                                                <div class="profile-experience-logo ng-scope" style="background-image: url('images/chaloafrica.png');"></div>
+                                            </div>
+                                            <div class="profile-experience-item-right">
+                                                <h3 class="profile-experience-company-name ng-binding">Chalo Africa</h3>
+                                                <div class="text-secondary profile-experience-subtitle">
+                                                    <span class="ng-binding">Web developer intern</span>
+                                                    <br>
+                                                    <profile-period profile-period-data="experience" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Dec</span>
+                                                        <span class="ng-binding">2013</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span class="ng-binding ng-scope">Mar</span>
+                                                        <span class="ng-binding ng-scope">2014</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </profile-experience-list>
+                                </div>
+                            </profile-experience>
+                        </div>
+                        <div class="profile-section-wrapper profile-education ng-scope" id="education">
+                            <div class="profile-section-border"></div>
+                            <profile-education class="profile-section ng-isolate-scope" ng-class="{'profile-section-empty': $ctrl.getIsSectionEmpty('education')}" profile-section-can-edit="$ctrl.canEdit" profile-section-is-empty="$ctrl.getIsSectionEmpty('education')" profile-section-data="$ctrl.profile">
+                                <div class="profile-section-header ng-scope" ng-if="!$ctrl.isEmpty">
+                                    <h1 class="profile-section-title">Education</h1>
+                                </div>
+                                <div class="profile-section-content">
+                                    <profile-education-list profile-education-list-items="$ctrl.data.education" profile-education-list-can-edit="$ctrl.canEdit" ng-class="{single: $ctrl.data.education.length === 1}" class="ng-isolate-scope single">
+                                        <div class="profile-education-item ng-scope" ng-repeat="education in $ctrl.items | orderBy:['-start_year', '-start_month']">
+                                            <div class="profile-education-image">
+                                                <div class="profile-education-logo ng-scope" style="background-image: url('images/manipal.svg');"></div>
+                                            </div>
+                                            <div class="profile-education-item-right">
+                                                <h3 class="profile-education-title ng-binding">Manipal University</h3>
+                                                <div class="text-secondary profile-education-subtitle">
+                                                    <span class="ng-binding">Computer Science</span>
+                                                    <br>
+                                                    <profile-period profile-period-data="education" class="ng-isolate-scope">
+                                                        <span class="ng-binding ng-scope">Aug</span>
+                                                        <span class="ng-binding">2011</span>
+                                                        <span class="ng-scope"> – </span>
+                                                        <span class="ng-binding ng-scope">May</span>
+                                                        <span class="ng-binding ng-scope">2015</span>
+                                                    </profile-period>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </profile-education-list>
+                                </div>
+                            </profile-education>
+                        </div>
+                        <div class="profile-section-wrapper profile-projects ng-scope" id="projects">
+                            <div class="profile-section-border"></div>
+                            <profile-projects class="profile-section ng-isolate-scope" ng-class="{'profile-section-empty': $ctrl.getIsSectionEmpty('projects')}" profile-section-can-edit="$ctrl.canEdit" profile-section-is-empty="$ctrl.getIsSectionEmpty('projects')" profile-section-data="$ctrl.profile">
+                                <div class="profile-section-header ng-scope" ng-if="!$ctrl.isEmpty">
+                                    <h1 class="profile-section-title">Projects</h1>
+                                </div>
+                                <div class="profile-section-content wide" ng-class="{wide: $ctrl.data.projects.length &gt; 2}">
+                                    <profile-projects-list class="profile-items-list ng-scope ng-isolate-scope" ng-if="$ctrl.data.projects.length &gt; 1" profile-projects-list-items="$ctrl.data.projects" profile-projects-list-can-edit="$ctrl.canEdit">
+                                        <rmt-masonry rmt-masonry-items="$ctrl.items" ng-class="{two: $ctrl.items.length === 2}" class="ng-isolate-scope" style="position: relative;">
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/zbase.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">Zomato Base</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="https://www.zomato.com/base" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/mbat.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">HEC MBAT</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="https://www.mbat.org/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/concierge.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">Maple Concierge</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="//mapleconcierge.com/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/bonton.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">BonTon Opticians</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="//bontonopticians.com/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/therawstraw.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">TheRawStraw</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="//therawstraw.com/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/ihireu.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">iHireU</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="//ihireu.in/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/mujconnect.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">MUJ Connect</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="https://play.google.com/store/apps/details?id=naman.com.muj" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="rmt-masonry-item profile-projects-item ng-scope" style="">
+                                                <img class="profile-project-image" src="images/resized/digisign.jpg">
+                                                <div class="profile-project-item-info">
+                                                    <a>
+                                                        <h3 class="profile-project-title ng-binding">Maple Digisign</h3>
+                                                    </a>
+                                                    <div class="profile-project-item-info-sub">
+                                                        <a class="profile-project-sub-link ng-scope" href="//mapledigisign.com/" target="_blank">Open Project</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </rmt-masonry>
+                                    </profile-projects-list>
+                                </div>
+                            </profile-projects>
+                        </div>
+                    </profile-sections>
+                    <rmt-modal ui-view="nav-modal" class="nav-modal ng-scope ng-isolate-scope"></rmt-modal>
+                </profile>
+            </ui-view>
+
+            <div ui-view="footer" class="ng-scope">
+                <footer class="layout-footer ng-scope">
+                    <div class="footer-sections">
+                        <div class="footer-links">
+                            <ul class="list-unstyled">
+
+                            </ul>
+                        </div>
+                        <div class="flex-fill"></div>
+                        <div class="footer-branding">
+                            <a class="footer-logo" ui-sref=".home"></a>
+                            <ul class="list-unstyled footer-social-icons">
+                                <li class="footer-social-icon">
+                                    <a svg-sprite="social-networks--instagram" href="mailto:namankhator@gmail.com" rel="nofollow" target="_blank">
+                                        <svg class="social-networks--instagram">
+                                          <svg class="social-networks--instagram">
+                                            <use xlink:href="images/icons.svg#message"></use>
+                                          </svg>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer-social-icon">
+                                    <a svg-sprite="social-networks--linkedin" href="https://linkedin.com/in/namankhator" rel="nofollow" target="_blank">
+                                        <svg class="social-networks--instagram">
+                  												<svg class="social-networks--instagram">
+                  													<use xlink:href="images/icons.svg#social-networks--linkedin"></use>
+                  												</svg>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="footer-social-icon">
+                                    <a svg-sprite="social-networks--facebook" href="https://github.com/princenaman" rel="nofollow" target="_blank">
+                                        <svg class="social-networks--facebook">
+                  												<svg class="social-networks--facebook">
+                  													<use xlink:href="images/icons.svg#social-networks--github"></use>
+                  												</svg>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="footer-copyright">Copyright 2017</p>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </ui-view>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-61064987-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
