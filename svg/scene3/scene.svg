@@ -547,13 +547,13 @@
 </g>
 <g id="skill15" data-2010="        transform[bounce]: scale(0);        opacity: 0;    " data-2020="        transform[bounce]: scale(1);        opacity: 1;    " class="skrollable skrollable-after" transform="scale(1)" style="transform: scale(1); opacity: 1;">
 	<g>
-		<text transform="matrix(1 0 0 1 401.4219 509.416)" fill="#FFFFFF" font-weight="400" font-size="18.0063">Version Control</text>
+		<text transform="matrix(1 0 0 1 401.4219 509.416)" fill="#FFFFFF" font-weight="400" font-size="18.0063">Jenkins</text>
 		<circle fill="#FFFFFF" cx="382.628" cy="502.73" r="8"></circle>
 	</g>
 </g>
 <g id="skill16" data-2020="        transform[bounce]: scale(0);        opacity: 0;    " data-2030="        transform[bounce]: scale(1);        opacity: 1;    " class="skrollable skrollable-after" transform="scale(1)" style="transform: scale(1); opacity: 1;">
 	<g>
-		<text transform="matrix(1 0 0 1 400.7275 543.416)" fill="#FFFFFF" font-weight="400" font-size="18.0063">Sail.js</text>
+		<text transform="matrix(1 0 0 1 400.7275 543.416)" fill="#FFFFFF" font-weight="400" font-size="18.0063">Adonis.js</text>
 		<circle fill="#FFFFFF" cx="381.628" cy="537.73" r="8"></circle>
 	</g>
 </g>

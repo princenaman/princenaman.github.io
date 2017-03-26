@@ -179,7 +179,7 @@
                                                     </div>
                                                 </md-progress-linear>
                                                 <div class="profile-skill-info">
-                                                    <span class="profile-skill-name ng-binding">Sails</span> &nbsp;&nbsp;&nbsp;
+                                                    <span class="profile-skill-name ng-binding">Adonis.js</span> &nbsp;&nbsp;&nbsp;
                                                 </div>
                                             </profile-skill>
                                             <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
@@ -346,6 +346,19 @@
                                                     <span class="profile-skill-years ng-binding ng-scope" ng-if="$ctrl.data.years">1+ yrs</span> &nbsp;&nbsp;&nbsp;
                                                 </div>
                                             </profile-skill>
+                                            <profile-skill class="profile-skills-item ng-scope ng-isolate-scope" profile-skill-data="skill" profile-skill-can-edit="$ctrl.canEdit" ng-repeat="skill in $ctrl.items | limitTo:$ctrl.limit">
+                                                <md-progress-linear class="profile-skill-meter ng-scope" ng-if="$ctrl.data.level !== null" value="100" md-mode="determinate" aria-valuemin="0" aria-valuemax="100" role="progressbar" aria-valuenow="100">
+                                                    <div class="md-container md-mode-determinate">
+                                                        <div class="md-dashed"></div>
+                                                        <div class="md-bar md-bar1"></div>
+                                                        <div class="md-bar md-bar2" style="transform: translateX(0%) scale(1, 1);"></div>
+                                                    </div>
+                                                </md-progress-linear>
+                                                <div class="profile-skill-info">
+                                                    <span class="profile-skill-name ng-binding">Jenkins</span>
+                                                    <span class="profile-skill-level ng-binding ng-scope" ng-if="$ctrl.data.level">Intermediate</span>
+                                                </div>
+                                            </profile-skill>
                                         </profile-skills-list>
                                     </div>
                                 </div>
@@ -413,7 +426,7 @@
                                                         <span class="ng-binding">2015</span>
                                                         <span class="ng-scope"> – </span>
                                                         <span class="ng-binding ng-scope">Jul</span>
-                                                        <span class="ng-binding ng-scope">2016</span>
+                                                        <span class="ng-binding ng-scope">2015</span>
                                                     </profile-period>
                                                 </div>
                                             </div>
